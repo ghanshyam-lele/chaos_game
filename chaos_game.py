@@ -26,10 +26,10 @@ img.put("#ffffff",start)
 def play():
     global start
     while True:
-        ch = random.choice(array)
-        point = ((start[0]+ch[0])/2,(start[1]+ch[1])/2)
-        img.put("#ffffff", point)
-        start=point;
+        choice = random.choice(array)
+        mid_point = ((start[0]+choice[0])/2,(start[1]+choice[1])/2)
+        img.put("#ffffff", mid_point)
+        start=mid_point;
         time.sleep(0.05)
 t= threading.Thread(target=play)
 t.start()
